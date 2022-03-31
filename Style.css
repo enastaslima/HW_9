@@ -1,0 +1,82 @@
+body{
+    box-sizing: border-box;
+}
+.container{
+    width:800px;
+    height: 600px;
+  
+   
+
+}
+.container ol{
+    list-style-type: none;
+    margin:70px 10px;
+    font-weight: bolder;
+    position: relative;
+}
+.container ol::before{
+    content:'';
+    position: absolute;
+    top:calc(100% + 5px);
+    left:0;
+    background-color: blue;
+    width: 500px;
+    height: 20px;
+    border-radius: 500px;
+}
+.container ol::after{
+    content:'';
+    position: absolute;
+    top:calc(100% + 5px);
+    left:0;
+    background-color:brown;
+    width: 0;
+    height: 20px;
+    border-radius: 500px;
+
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
+
+}
+.container ol.html::after{
+    animation-name: html;
+   
+}
+@keyframes html{
+  from{
+      background-color: firebrick;
+  }
+    to{
+        width:65%;
+        background-color: rgb(236, 45, 83);
+    }
+}
+
+.container ol.css::after{
+    animation-name: css;
+
+}
+@keyframes css{
+    from{
+        background-color: deeppink;
+    }
+  
+    to{
+        width:45%;
+        background-color: rgb(218, 129, 147);
+    }
+}
+.container ol.javascript::after{
+    animation-name: javascript;
+}
+@keyframes javascript{
+    from{
+        background-color: rgb(22, 82, 59);
+    }
+  
+    to{
+        width:60%;
+        background-color: rgb(74, 187, 153);
+    }
